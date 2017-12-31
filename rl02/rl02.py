@@ -1,6 +1,14 @@
 import gym
-env = gym.make("FrozenLake-v0")
-observation = env.reset()
+
+
+# sample AI code by using gym
+# env = gym.make("FrozenLake-v0")
+# observation = env.reset()
+
+# for _ in range(1000):
+#   env.render()
+#   action = env.action_space.sample()
+#   observation, reward, done, info = env.step(action)
 
 
 class _Getch:
@@ -13,6 +21,7 @@ class _Getch:
         finally:
             termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
         return ch
+
 
 inkey = _Getch()
 
@@ -29,8 +38,7 @@ arrow_keys = {
         }
 
 
-for _ in range(1000):
-  env.render()
-  action = env.action_space.sample()
-  observation, reward, done, info = env.step(action)
 
+register(
+        id = 'FrozenLake-v3',
+)
